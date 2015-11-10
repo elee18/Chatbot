@@ -37,7 +37,10 @@ public class ChatBot5
   {
    response = "Say something, please.";
   }
-
+else if (findKeyword(statement, "what is your name") >=0)
+{ 
+  response= "My name is Maggie. What is your name?";
+}
   else if (findKeyword(statement, "no") >= 0)
   {
    response = "Why so negative?";
@@ -45,7 +48,7 @@ public class ChatBot5
   else if (findKeyword(statement, "mother") >= 0
     || findKeyword(statement, "father") >= 0
     || findKeyword(statement, "sister") >= 0
-    || findKeyword(statement, "brother") >= 0)\
+    || findKeyword(statement, "brother") >= 0
     || findKeyword(statement, "cousin") >= 0
     || findKeyword(statement, "aunt") >= 0
     || findKeyword(statement, "uncle") >= 0
@@ -120,6 +123,10 @@ else if (findKeyword(statement, "pet") >=0 //PETS
       && findKeyword(statement, "you", psn) >= 0)
     {
      response = transformIYouStatement(statement);
+    }
+    else if(findKeyword(statement, "?") >=0)
+    {
+     response = "I'm more interested in you than in me"; 
     }
     else
     {
@@ -320,7 +327,9 @@ else if (findKeyword(statement, "pet") >=0 //PETS
  private String [] randomResponses = {"Interesting, tell me more",
    "Hmmm.",
    "Do you really think so?",
-   "You don't say."
+   "You don't say.",
+   "Interesting...",
+   "Me too!"
  };
  
 }
