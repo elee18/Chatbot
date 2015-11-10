@@ -45,11 +45,47 @@ public class ChatBot5
   else if (findKeyword(statement, "mother") >= 0
     || findKeyword(statement, "father") >= 0
     || findKeyword(statement, "sister") >= 0
-    || findKeyword(statement, "brother") >= 0)
+    || findKeyword(statement, "brother") >= 0)\
+    || findKeyword(statement, "cousin") >= 0
+    || findKeyword(statement, "aunt") >= 0
+    || findKeyword(statement, "uncle") >= 0
+    || findKeyword(statement, "grandfather") >= 0
+    || findKeyword(statement, "niece") >= 0
+    || findKeyword(statement, "nephew") >= 0
+    || findKeyword(statement, "grandmother") >= 0
+    || findKeyword(statement, "grandson") >= 0
+    || findKeyword(statement, "granddaughter") >= 0)
   {
    response = "Tell me more about your family.";
   }
-
+else if (findKeyword(statement, "pet") >=0 //PETS
+               || findKeyword(statement, "dog") >= 0
+               || findKeyword(statement, "cat") >= 0   
+               || findKeyword(statement, "hamster") >= 0
+               || findKeyword(statement, "snake") >= 0)
+    {
+      response = "Tell me more about your pets.";
+    }
+     else if (findKeyword(statement, "why") >=0 && statement.indexOf ("?") >=0) //WHY QUESTION
+    {
+      response = "I am not sure.";
+    }
+    else if (findKeyword(statement, "sports") >=0 //SPORTS
+               || findKeyword(statement, "tennis") >=0
+               || findKeyword(statement, "soccer") >=0 
+               || findKeyword(statement, "football") >=0 
+               || findKeyword(statement, "fieldhockey") >=0 
+               || findKeyword(statement, "lacrosse") >=0
+               || findKeyword(statement, "swimming") >=0 
+               || findKeyword(statement, "diving") >=0 
+               || findKeyword(statement, "running") >=0 
+               || findKeyword(statement, "jogging") >=0 
+               || findKeyword(statement, "basketball") >=0 
+               || findKeyword(statement, "track") >=0 
+               || findKeyword(statement, "crosscountry") >=0) 
+    {
+      response = "I love sports!";
+    }
   // Responses which require transformations
   else if (findKeyword(statement, "I want to", 0) >= 0)
   {
